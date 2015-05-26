@@ -12,12 +12,11 @@ Get list of integer whose value is higher than six.
 
 > With foreach
 
-	List<int> numbers = new List<int>(new int[]{1,2,3,4,5,6,7,8,9,10,11,12});
-	
+	List<int> numbers = new List<int>(new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
 	List<int> numbersAboveSix = new List<int>();
 	foreach (var number in numbers)
 	{
-		if (number>6)
+		if (number > 6)
 		{
 			numbersAboveSix.Add(number);
 		}
@@ -26,14 +25,14 @@ Get list of integer whose value is higher than six.
 	
 > With LINQ (Method syntax)
 
-	List<int> numbers = new List<int>(new int[]{1,2,3,4,5,6,7,8,9,10,11,12});
+	List<int> numbers = new List<int>(new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
 	
 	var numbersAboveSix = numbers.Where(number => number > 6);
  	// numbersAboveSix: 7,8,9,10,11,12
 
 > With LINQ (Query syntax)
 
-	List<int> numbers = new List<int>(new int[]{1,2,3,4,5,6,7,8,9,10,11,12});
+	List<int> numbers = new List<int>(new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
 	
 	var numbersAboveSix = from number in numbers 
 			              where number > 6 
@@ -50,9 +49,9 @@ Basic LINQ Operations
 
 The most common query operation is to apply a filter in the form of a Boolean expression. You can use multiple conditions to get the data. For example list of integer whose value is higher than six OR the number is even.
 
-	List<int> numbers = new List<int>(new int[]{1,2,3,4,5,6,7,8,9,10,11,12});
+	List<int> numbers = new List<int>(new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
 	
-	var result = numbers.Where(number => number > 6 || number%2==0;
+	var result = numbers.Where(number => number > 6 || number % 2 == 0;
 	// result : 2,4,7,8,9,10,11,12
     
 ### Getting Data from Source (**Select, First, FirstOrDefault, Last, LastOrDefault**)
@@ -64,16 +63,16 @@ You can get the wanted data from the collection. For example, the strings's leng
 	var numbersLenth = numbers.Select(number => number.Length);
 	// numbersLenth : 3,3,5,4,4
 	
-	var example1 = numbers.Where(number => number.Length>3).First();
+	var example1 = numbers.Where(number => number.Length > 3).First();
 	// example1: "Three"
 	
-	var example2 = numbers.Where(number => number.Length>7).First();
+	var example2 = numbers.Where(number => number.Length > 7).First();
 	// Error: There is no string which length higher than seven 
 	
-	var example3 = numbers.Where(number => number.Length>7).FirstOrDefault();
+	var example3 = numbers.Where(number => number.Length > 7).FirstOrDefault();
 	// example3: null
 	
-	var example4 = numbers.FirstOrDefault(number => number.Length>7);
+	var example4 = numbers.FirstOrDefault(number => number.Length > 7);
 	// you can simplify the query
 	
 ### Ordering (**OrderBy, OrderByDescending**)
