@@ -293,6 +293,24 @@
                         "href": ""
                     }
                 ]
+            },
+            {
+                "name": "LeagueSharp.Live",
+                "subName": "",
+                "navItems": [
+                    {
+                        "name": "About LeagueSharp.Live",
+                        "href": ""
+                    },
+                    {
+                        "name": "How it works",
+                        "href": ""
+                    },
+                    {
+                        "name": "Creating Basic Plugin",
+                        "href": ""
+                    }
+                ]
             }
         ]
     }

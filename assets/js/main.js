@@ -15,6 +15,9 @@ var app = angular.module("LeagueSharpDocs", ['ngRoute', 'LeagueSharpDocs.service
 		templateUrl: 'templates/index.html',
 		controller: 'StartController'
 	})
+	.when('/demo', {
+		templateUrl: 'demo.html'
+	})
 	.when('/:name*', {
 		templateUrl: 'templates/default.html',
 	}).when('/404', {
