@@ -243,6 +243,9 @@ header#header ul li a:hover {
 section {
   margin-bottom: 20px;
 }
+section#content img {
+  display: none;
+}
 section#content h2 {
   font-size: 18px;
   font-weight: normal;

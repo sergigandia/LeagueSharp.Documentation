@@ -24,7 +24,7 @@
                 "navItems": [
                     {
                         "name": "Hello World",
-                        "href": ""
+                        "href": "HelloWorld"
                     },
                     {
                         "name": "Variables",
